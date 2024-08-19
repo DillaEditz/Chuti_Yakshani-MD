@@ -75,7 +75,7 @@ async function connectToWA() {
             let up = `Chuti_Yakshani-MD connected successfully ✅\n\nPREFIX: ${prefix}`;
 
             conn.sendMessage(ownerNumber + "@s.whatsapp.net", {
-                image: { url: `https://telegra.ph/file/900435c6d3157c98c3c88.jpg` },
+                image: { url: `https://telegra.ph/file/3653d1cd025076c0559d5.jpg` },
                 caption: up
             });
         }
