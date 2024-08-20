@@ -1,6 +1,6 @@
 const config = require('../config');
 const { cmd, commands } = require('../command');
-
+const { fetchJson } = require('../lib/functions');
 // Register the 'ai' command
 cmd({
     pattern: "ai",
@@ -14,6 +14,7 @@ cmd({
     isBotAdmins, isAdmins, reply
 }) => {
     try {
+        let data = await fechJson('')
     }catch(e){
       console.log(e)
       reply('${e}')
