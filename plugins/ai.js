@@ -14,8 +14,10 @@ cmd({
     isBotAdmins, isAdmins, reply
 }) => {
     try {
-        let data = await fechJson('')
+        let data = await fechJson('https://chatgptforprabath-md.vercel.app/api/gptv1?q=${q}')
+        return reply('${data.data}')
     }catch(e){
       console.log(e)
       reply('${e}')
     }
+})
