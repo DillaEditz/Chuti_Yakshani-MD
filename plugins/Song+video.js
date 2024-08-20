@@ -39,7 +39,7 @@ cmd({
 
         // Download the audio
         let down = await fg.yta(url);
-        let downloadUrl = down.dl_link;
+        let downloadUrl = down.dl_url;
 
         // Send the audio file
         await conn.sendMessage(from, { audio: { url: downloadUrl }, mimetype: "audio/mpeg" }, { quoted: mek });
