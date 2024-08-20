@@ -15,8 +15,9 @@ cmd({
     isBotAdmins, isAdmins, reply
 }) => {
     try {
-
-    }catch(e){
+        if(!q) return reply("Please give the url or the title.")
+        const search = await yts(q)
+    }catch(e)
       console.log(e)
       reply('${e}')
     }
