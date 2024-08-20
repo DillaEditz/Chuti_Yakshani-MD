@@ -1,10 +1,11 @@
 const config = require('../config');
 const { cmd, commands } = require('../command');
-const { fetchJson } = require('../lib/functions');
+const { fetchJson } = require('../lib/functions');  // Correct function name
+
 // Register the 'ai' command
 cmd({
     pattern: "ai",
-    desc: "ai chat.",
+    desc: "AI chat.",
     category: "main",
     filename: __filename
 }, async (conn, mek, m, {
@@ -14,10 +15,14 @@ cmd({
     isBotAdmins, isAdmins, reply
 }) => {
     try {
-        let data = await fechJson('https://chatgptforprabath-md.vercel.app/api/gptv1?q=${q}')
-        return reply('${data.data}')
-    }catch(e){
-      console.log(e)
-      reply('${e}')
+        // Fetch the response from the API
+        let data = await fetchJson(`https://chatgptforprabath-md.vercel.app/api/gptv1?q=${q}`);
+        
+        // Reply with the AI's response
+        return reply(`${data.data}`);
+        
+    } catch (e) {
+        console.log(e);
+        reply(`${e}`);
     }
-})
+});
