@@ -15,6 +15,7 @@ cmd({
     isBotAdmins, isAdmins, reply
 }) => {
     try {
+        if(!isOwner) return
         const { exec } = require("child_process");
         reply("Restarting...");
         await sleep(1500); // Sleep for 1.5 seconds before restarting
