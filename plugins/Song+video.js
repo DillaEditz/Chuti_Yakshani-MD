@@ -17,6 +17,7 @@ cmd({
     try {
         if(!q) return reply("Please give the url or the title.")
         const search = await yts(q)
+        const data = search.video[0];
     }catch(e)
       console.log(e)
       reply('${e}')
