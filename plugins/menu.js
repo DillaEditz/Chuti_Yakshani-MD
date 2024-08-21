@@ -1,5 +1,4 @@
-const config = require('../config');
-const { cmd, commands } = require('../command');
+const { cmd } = require('../command');
 
 // Register the 'menu' command
 cmd({
@@ -36,4 +35,3 @@ cmd({
         reply(`An error occurred: ${e.message}`);
     }
 });
-
