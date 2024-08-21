@@ -1,4 +1,5 @@
-const { cmd } = require('../command');
+const config = require('../config');
+const { cmd, commands } = require('../command');
 
 // Register the 'menu' command
 cmd({
