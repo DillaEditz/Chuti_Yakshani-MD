@@ -5,7 +5,7 @@ const os = require("os")
 cmd({
     pattern: "system",
     alias: ["status","botinfo"],
-    desc: "Check if the bot is online.",
+    desc: "Check up botsystem info",
     category: "main",
     filename: __filename
 }, async (conn, mek, m, {
