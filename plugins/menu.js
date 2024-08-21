@@ -1,9 +1,12 @@
 const { cmd } = require('../command');
 
+// Define the prefix here
+const prefix = '.';
+
 // Register the 'menu' command
 cmd({
     pattern: "menu",
-    alias: ["help"],
+    alias: ["help", "menu"],
     desc: "Displays the bot menu.",
     category: "main",
     filename: __filename
@@ -16,7 +19,7 @@ cmd({
     try {
         // Define the menu message
         const menuMessage = `*👋 Welcome to Chuti_Yakshani-MD Bot Menu 👋*
-        
+
 *Here are the commands you can use:*
 
 1. *${prefix}alive* - Check if the bot is online and see system info.
