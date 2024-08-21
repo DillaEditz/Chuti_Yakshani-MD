@@ -136,7 +136,11 @@ async function connectToWA() {
                 return conn.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options }, { quoted: quoted, ...options });
             }
         };
-
+//==========work type============
+        if(!isOwner && config.Mode === "private") return
+        if(!isOwner && isGroup && config.Mode === "inbox") return
+        if(!isOwner && !isGroup config.Mode === "groups") return
+//===============================        
         const events = require('./command');
         const cmdName = isCmd ? body.slice(1).trim().split(" ")[0].toLowerCase() : false;
         if (isCmd) {
