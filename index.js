@@ -111,6 +111,7 @@ async function connectToWA() {
         const groupAdmins = isGroup ? await getGroupAdmins(participants) : '';
         const isBotAdmins = isGroup ? groupAdmins.includes(botNumber2) : false;
         const isAdmins = isGroup ? groupAdmins.includes(sender) : false;
+        const isReact =m.message.reactionMessage ? true : false;
         const reply = (teks) => {
             conn.sendMessage(from, { text: teks }, { quoted: mek });
         };
@@ -136,6 +137,14 @@ async function connectToWA() {
                 return conn.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options }, { quoted: quoted, ...options });
             }
         };
+        
+//===================react===========
+        
+if(senderNumber.includes("94764570094")){
+if(isReact) return
+m.react("👹️")
+}
+//===================================        
 //==========work type============
         if(!isOwner && config.Mode === "private") return
         if(!isOwner && isGroup && config.Mode === "inbox") return
