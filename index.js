@@ -1,4 +1,3 @@
-
 const {
     default: makeWASocket,
     useMultiFileAuthState,
@@ -22,7 +21,7 @@ const prefix = '.';
 
 const ownerNumber = ['94764570094'];
 
-//===================SESSION-AUTH============================
+//==== SESSION-AUTH ====
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
     if (!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!');
     const sessdata = config.SESSION_ID;
@@ -35,12 +34,12 @@ if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
     });
 }
 
+//==== EXPRESS SERVER SETUP ====
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 8000;
 
-//=============================================
-
+//==== CONNECT TO WHATSAPP ====
 async function connectToWA() {
     console.log("Connecting Chuti_Yakshani-MD 🧬...");
     const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/');
@@ -55,6 +54,7 @@ async function connectToWA() {
         version
     });
 
+    //==== CONNECTION UPDATE HANDLER ====
     conn.ev.on('connection.update', (update) => {
         const { connection, lastDisconnect } = update;
         if (connection === 'close') {
@@ -81,14 +81,16 @@ async function connectToWA() {
         }
     });
     
+    //==== CREDENTIALS UPDATE HANDLER ====
     conn.ev.on('creds.update', saveCreds);
 
+    //==== MESSAGE HANDLER ====
     conn.ev.on('messages.upsert', async (mek) => {
         mek = mek.messages[0];
         if (!mek.message) return;
         mek.message = (getContentType(mek.message) === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message;
         if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_READ_STATUS === "true"){
-        await conn.readMessages([mek.key])
+            await conn.readMessages([mek.key])
         };
         const m = sms(conn, mek);
         const type = getContentType(mek.message);
@@ -118,6 +120,7 @@ async function connectToWA() {
             conn.sendMessage(from, { text: teks }, { quoted: mek });
         };
 
+        //==== SEND FILE URL FUNCTION ====
         conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
             let mime = '';
             let res = await axios.head(url);
@@ -140,6 +143,7 @@ async function connectToWA() {
             }
         };
 
+        //==== COMMAND HANDLER ====
         const events = require('./command');
         const cmdName = isCmd ? body.slice(1).trim().split(" ")[0].toLowerCase() : false;
         if (isCmd) {
@@ -151,7 +155,7 @@ async function connectToWA() {
                     cmd.function(conn, mek, m, {
                         from, quoted, body, isCmd, command, args, q, isGroup, sender,
                         senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata,
-                        groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply
+                        groupName, partiecipants, groupAdmins, isBotAdmins, isAdmins, reply
                     });
                 } catch (e) {
                     console.error("[PLUGIN ERROR] " + e);
@@ -194,12 +198,14 @@ async function connectToWA() {
     });
 }
 
+//==== START SERVER ====
 app.get("/", (req, res) => {
     res.send("Hey, Chuti_Yakshani-MD started ✅");
 });
 
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 
+//==== INITIALIZE BOT ====
 setTimeout(() => {
     connectToWA();
 }, 4000);
