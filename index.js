@@ -74,7 +74,7 @@ async function connectToWA() {
             let up = `Chuti_Yakshani-MD connected successfully ✅\n\nPREFIX: ${prefix}`;
 
             conn.sendMessage(ownerNumber + "@s.whatsapp.net", {
-                image: { url: `https://telegra.ph/file/900435c6d3157c98c3c88.jpg` },
+                image: { url: `https://telegra.ph/file/3653d1cd025076c0559d5.jpg` },
                 caption: up
             });
         }
@@ -139,7 +139,7 @@ async function connectToWA() {
 //==========work type============
         if(!isOwner && config.Mode === "private") return
         if(!isOwner && isGroup && config.Mode === "inbox") return
-        if(!isOwner && !isGroup config.Mode === "groups") return
+        if(!isOwner && !isGroup && config.Mode === "groups") return
 //===============================        
         const events = require('./command');
         const cmdName = isCmd ? body.slice(1).trim().split(" ")[0].toLowerCase() : false;
