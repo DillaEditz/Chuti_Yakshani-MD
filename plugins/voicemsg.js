@@ -12,6 +12,8 @@ const sendVoiceWithMsg = async (conn, mek, m, {
             gn: { file: 'gn.mp3', message: `Good Night, ${pushname}! 🌙` },
             mk: { file: 'mk.mp3', message: `Hello, ${pushname}! Have a great day!` },
             mn: { file: 'mn.mp3', message: `Good Evening, ${pushname}! 🌇` }
+            hi: { file: 'hi.mp3', message: `Hi, ${pushname}! 🔫` }
+        };
         };
 
         // Get the corresponding audio file and message for the command
@@ -61,6 +63,13 @@ cmd({
 cmd({
     pattern: "mn",
     desc: "Send Good Evening voice note and message",
+    category: "voicemsg",
+    filename: __filename
+}, sendVoiceWithMsg);
+
+cmd({
+    pattern: "hi",
+    desc: "Send hi voice note and message",
     category: "voicemsg",
     filename: __filename
 }, sendVoiceWithMsg);
