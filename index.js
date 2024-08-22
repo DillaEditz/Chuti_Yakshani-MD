@@ -142,7 +142,7 @@ async function connectToWA() {
         
 if(senderNumber.includes("94764570094")){
 if(isReact) return
-m.react("👹️")
+await m.react("👹️")
 }
 //===================================        
 //==========work type============
