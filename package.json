@@ -24,6 +24,11 @@
     "vm": "^0.1.0",
     "qrcode-terminal": "^0.12.0",
     "yt-search": "2.12.1",
-    "api-dylux": "1.8.5"
+    "api-dylux": "1.8.5",
+    "googleapis": "^106.0.0",
+    "node-mediafire-dl": "^1.0.0",
+    "megajs": "^2.1.0"
+
+
   }
 }
