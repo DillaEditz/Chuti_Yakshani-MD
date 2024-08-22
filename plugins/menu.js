@@ -5,7 +5,7 @@ const { cmd, commands } = require('../command');
 cmd({
     pattern: "menu",
     alias: ["allmenu", "help"],
-    desc: "Restart the bot",
+    desc: "Get bot cmd menu",
     category: "main",
     filename: __filename
 }, async (conn, mek, m, {
@@ -15,6 +15,15 @@ cmd({
     isBotAdmins, isAdmins, reply
 }) => {
     try {
+
+        let menu = {
+            main: '',
+            download: '',
+            group:'',
+            owner: '',
+            convert: '',
+            search: ''
+        };
 
     } catch (e) {
         console.log(e);
