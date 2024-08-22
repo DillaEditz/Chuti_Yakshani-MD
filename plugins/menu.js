@@ -24,7 +24,7 @@ cmd({
             convert: '',
             search: ''
         };
-        
+
         for (let i = 0; i < commands.length; i++) {
         if (commands[i].pattern && !commands[i].dontAddCommandList) {
         menu[commands[i].category] += `.${commands[i].pattern}\n`;
@@ -32,34 +32,34 @@ cmd({
     }
 
         let madeMenu = `👹️ *_Chuti_Yakshani-Md_* 👹️
-        
-        👋*Hello ${pushname}*
-        
-        > *Main Commands* ⚙️
-        
-        ${menu.main}
-        
-        > *Owner Commands* 🧑‍💻
-        
-        ${menu.owner}
-        
-        > *Group Commands* 🥷
-        
-        ${menu.group}
-        
-        > *Convert Commands* ♻️
-        
-        ${menu.convert}
-        
-        > *Download Commands* ⏬
-        
-        ${menu.download}
-        
-        > *Search Commands* 🌐
-        
-        ${menu.search}
-        
-        ♻️ *~Powered by Chuti_Yakshani-MD~* ♻️`
+
+👋 *Hello* ${pushname}
+
+> *Main Commands* ⚙️
+
+${menu.main}
+
+> *Owner Commands* 🧑‍💻
+
+${menu.owner}
+
+> *Group Commands* 🥷
+
+${menu.group}
+
+> *Convert Commands* ♻️
+
+${menu.convert}
+
+> *Download Commands* ⏬
+
+${menu.download}
+
+> *Search Commands* 🌐
+
+${menu.search}
+
+♻️ *~Powered by Chuti_Yakshani-MD~* ♻️`
 
     await conn.sendMessage(from,{image:{url:"https://telegra.ph/file/3653d1cd025076c0559d5.jpg"},caption:madeMenu},{quoted:mek})
 
