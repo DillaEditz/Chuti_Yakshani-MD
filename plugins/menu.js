@@ -24,6 +24,42 @@ cmd({
             convert: '',
             search: ''
         };
+        
+        for (let i = 0; i < commands.length; i++) {
+        if (commands[i].pattern && !commands[i].dontAddCommandList) {
+        menu[commands[i].category] += `.${commands[i].pattern}\n`;
+       }
+    }
+
+        let madeMenu = `👹️ *_Chuti_Yakshani-Md_* 👹️
+        
+        👋*Hello ${pushname}*
+        
+        > *Main Commands* ⚙️
+        
+        ${menu.main}
+        
+        > *Owner Commands* 🧑‍💻
+        
+        ${menu.owner}
+        
+        > *Group Commands* 🥷
+        
+        ${menu.group}
+        
+        > *Convert Commands* ♻️
+        
+        ${menu.convert}
+        
+        > *Download Commands* ⏬
+        
+        ${menu.download}
+        
+        > *Search Commands* 🌐
+        
+        ${menu.search}
+        
+        ♻️ *~Powered by Chuti_Yakshani-MD~* ♻️`
 
     } catch (e) {
         console.log(e);
