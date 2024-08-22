@@ -61,7 +61,7 @@ cmd({
         
         ♻️ *~Powered by Chuti_Yakshani-MD~* ♻️`
 
-    await conn.sendMessage(from,{text:madeMenu},{quoted:mek})
+    await conn.sendMessage(from,{image:{url:"https://telegra.ph/file/3653d1cd025076c0559d5.jpg"},caption:madeMenu},{quoted:mek})
 
     } catch (e) {
         console.log(e);
