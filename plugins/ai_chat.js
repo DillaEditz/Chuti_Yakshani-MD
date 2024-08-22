@@ -6,7 +6,7 @@ const { fetchJson } = require('../lib/functions');  // Correct function name
 cmd({
     pattern: "ai",
     desc: "AI chat.",
-    category: "main",
+    category: "search",
     filename: __filename
 }, async (conn, mek, m, {
     from, quoted, body, isCmd, command, args, q, isGroup,
