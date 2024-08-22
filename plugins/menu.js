@@ -22,7 +22,8 @@ cmd({
             group:'',
             owner: '',
             convert: '',
-            search: ''
+            search: '',
+            voicemsg: ''
         };
 
         for (let i = 0; i < commands.length; i++) {
@@ -58,6 +59,10 @@ ${menu.download}
 > *Search Commands* 🌐
 
 ${menu.search}
+
+> *Voice  Commands* 🎤
+
+${menu.voicemsg}
 
 ♻️ *~Powered by Chuti_Yakshani-MD~* ♻️`
 
