@@ -11,7 +11,7 @@ const sendVoiceWithMsg = async (conn, mek, m, {
             gm: { file: 'gm.mp3', message: `Good Morning, ${pushname}! 🌅` },
             gn: { file: 'gn.mp3', message: `Good Night, ${pushname}! 🌙` },
             mk: { file: 'mk.mp3', message: `Hello, ${pushname}! Have a great day!` },
-            mn: { file: 'mn.mp3', message: `Good Evening, ${pushname}! 🌇` }
+            mn: { file: 'mn.mp3', message: `Good Evening, ${pushname}! 🌇` },
             hi: { file: 'hi.mp3', message: `Hi, ${pushname}! 🔫` }
         };
         };
