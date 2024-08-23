@@ -17,7 +17,7 @@ const util = require('util');
 const { sms, downloadMediaMessage } = require('./lib/msg');
 const axios = require('axios');
 const { File } = require('megajs');
-const prefix = '.';
+const prefix = ['.', '#', ' ', '=']; // Add as many prefixes as you like
 
 const ownerNumber = ['94764570094'];
 
