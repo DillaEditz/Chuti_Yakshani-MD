@@ -13,5 +13,5 @@ function convertToBool(text, fault = 'true') {
 // Export the SESSION_ID environment variable
 module.exports = {
     SESSION_ID: process.env.SESSION_ID || 'NiNkiLYR#s9WY9HeYnG9-epInW_DW3IcjtJff8HdUGmYUO3SkfRM',
-    MONGODB: process.env.MONGODB || "ENTER MONGO DB API",
+    MONGODB: process.env.MONGODB || "mongodb://mongo:zIxtHUuJPKuaoelBowgvpGIGlXupPJiP@autorack.proxy.rlwy.net:14561",
 };
