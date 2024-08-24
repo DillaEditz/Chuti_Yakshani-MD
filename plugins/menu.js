@@ -1,4 +1,4 @@
-const {readEnv} require('../lib/database');
+const {readEnv} = require('../lib/database');
 const { cmd, commands } = require('../command');
 
 // Register the 'menu' command
