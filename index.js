@@ -41,6 +41,11 @@ const port = process.env.PORT || 8000;
 //=============================================
 
 async function connectToWA() {
+
+    //=============connect MONGODB=========
+    const connectDB = require('./lib/mongodb')
+    connectDB();
+    //================================
     console.log("Connecting Chuti_Yakshani-MD 🧬...");
     const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/');
     var { version } = await fetchLatestBaileysVersion();
