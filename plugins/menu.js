@@ -1,4 +1,4 @@
-const config = require('../config');
+const {readEnv} require('../lib/database');
 const { cmd, commands } = require('../command');
 
 // Register the 'menu' command
@@ -16,6 +16,8 @@ cmd({
 }) => {
     try {
 
+        const config = await readEnv();
+
         let menu = {
             main: '',
             download: '',
@@ -28,7 +30,7 @@ cmd({
 
         for (let i = 0; i < commands.length; i++) {
         if (commands[i].pattern && !commands[i].dontAddCommandList) {
-        menu[commands[i].category] += `.${commands[i].pattern}\n`;
+        menu[commands[i].category] += `${config.PREFIX}${commands[i].pattern}\n`;
        }
     }
 
@@ -66,7 +68,7 @@ ${menu.voicemsg}
 
 ♻️ *~Powered by Chuti_Yakshani-MD~* ♻️`
 
-    await conn.sendMessage(from,{image:{url:"https://telegra.ph/file/3653d1cd025076c0559d5.jpg"},caption:madeMenu},{quoted:mek})
+    await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{quoted:mek})
 
     } catch (e) {
         console.log(e);
