@@ -1,4 +1,4 @@
-const config = require('../config');
+const {readEnv} = require('../lib/database.js')
 const { cmd, commands } = require('../command');
 const os = require('os');
 const { runtime } = require('../lib/functions');
@@ -17,6 +17,9 @@ cmd({
     isBotAdmins, isAdmins, reply
 }) => {
     try {
+
+const config = await readEnv();
+        
         // Construct the system status message
         let status = `👹️ *_Chuti_Yakshani-Md_* 👹️
 👋 *Hello* ${pushname}
