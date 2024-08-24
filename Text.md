@@ -2,7 +2,7 @@
 
 👋 *Hello* ${pushname}
 
-> *Main Commands* ⚙️
+> *Main Commands* 🛠️
 
 ${menu.main}
 
@@ -10,24 +10,24 @@ ${menu.main}
 
 ${menu.owner}
 
-> *Group Commands* 🥷
+> *Group Commands* 👥
 
 ${menu.group}
 
-> *Convert Commands* ♻️
+> *Convert Commands* 🔁
 
 ${menu.convert}
 
-> *Download Commands* ⏬
+> *Download Commands* 📥
 
 ${menu.download}
 
-> *Search Commands* 🌐
+> *Search Commands* 🤖
 
 ${menu.search}
 
-> *Voice  Commands* 🎤
+> *Voice  Commands* 🔊
 
 ${menu.voicemsg}
 
-♻️ *~Powered by Chuti_Yakshani-MD~* ♻️`
+♻️ *~Powered by Chuti_Yakshani-MD~* ♻️
