@@ -74,8 +74,7 @@ ${menu.search}
 └─━═━═━═━◈═◈═◈═━═━═━═━┘
 ${menu.voicemsg}
 
-     *~Powered by Chuti_Yakshani-MD~* ♻️
-`
+     *~Powered by Chuti_Yakshani-MD~* ♻️`
 
 
     await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{quoted:mek})
