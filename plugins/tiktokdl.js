@@ -1,4 +1,4 @@
-const {cmd , commands} = require('../command');
+/* const {cmd , commands} = require('../command');
 const { ttdl } = require('ruhend-scraper');
 
 cmd({
@@ -52,4 +52,4 @@ try{
 console.log(e)
   reply(`${e}`)
 }
-});
+}); */
