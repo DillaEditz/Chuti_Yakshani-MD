@@ -27,6 +27,7 @@
     "api-dylux": "1.8.5",
     "mongoose": "8.5.4",
     "@bochilteam/scraper": "5.0.1",
-    "@xct007/frieren-scraper": "0.0.2"
+    "@xct007/frieren-scraper": "0.0.2",
+    "cheerio": "^1.0.0-rc.10"
   }
 }
