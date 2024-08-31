@@ -51,11 +51,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             await m.react('❌');
             return await reply('*`Error downloading video.`*');
         }
-    } catch (e) {
-        console.log(e);
-        await reply(`${e}`);
-    }
-});
+    } 
  {cmd , commands } = require('../command');
 const { ttdl } = require('ruhend-scraper');
 
