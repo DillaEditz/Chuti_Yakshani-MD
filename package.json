@@ -1,3 +1,6 @@
+What do i want to add to package.json
+This is my pkg.json
+
 {
   "name": "Chuti_Yakshani-MD",
   "version": "1.0.0",
@@ -25,7 +28,6 @@
     "qrcode-terminal": "^0.12.0",
     "yt-search": "2.12.1",
     "api-dylux": "1.8.5",
-    "mongoose": "8.5.4",
-    "ruhend-scraper":"7.0.6"
+    "mongoose": "8.5.4"
   }
 }
