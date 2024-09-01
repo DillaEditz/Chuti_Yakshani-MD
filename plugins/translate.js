@@ -21,11 +21,12 @@ async (conn, mek, m, { from, q, reply }) => {
         const response = await axios.get(url);
         const translation = response.data.responseData.translatedText;
 
-        const translationMessage = `👹️ *_Chuti_Yakshani-Md Translator* 👹️
-🌍 *Translation* 🌍
+        const translationMessage = `👹️ *_Chuti_Yakshani-Md Translator_* 👹️
 
 🔤 *Original*: ${textToTranslate}
+
 🔠 *Translated*: ${translation}
+
 🌐 *Language*: ${targetLang.toUpperCase()}
 
 ♻️ *~Powered by Chuti_Yakshani-MD~* ♻️`;
