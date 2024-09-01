@@ -65,7 +65,7 @@ cmd({
       await conn.sendMessage(from, {
         video: { url: data.data.no_wm },
         mimetype: "video/mp4",
-        caption: `🚀 NO-WATERMARK DilaMD TIKTOK DOWNLOADER 🎵✨📥\n\n ${yourName}`
+        caption: `🚀 NO-WATERMARK TIKTOK DOWNLOADER 🎵✨📥\n\n ${yourName}`
       }, { quoted: mek });
     }
 
@@ -73,7 +73,7 @@ cmd({
       await conn.sendMessage(from, {
         video: { url: data.data.wm },
         mimetype: "video/mp4",
-        caption: `🚀 With-WATERMARK DilaMD TIKTOK DOWNLOADER 🎵✨📥\n\n ${yourName}`
+        caption: `🚀 With-WATERMARK TIKTOK DOWNLOADER 🎵✨📥\n\n ${yourName}`
       }, { quoted: mek });
     }
 
