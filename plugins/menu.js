@@ -26,6 +26,7 @@ cmd({
             convert: '',
             search: '',
             fun: '',
+            edit: '',
             other: ''
         };
 
@@ -66,11 +67,15 @@ ${menu.download}
 └─━═━═━═━◈═◈═◈═━═━═━═━┘
 ${menu.search}
 ┌─━═━═━═━◈═◈═◈═━═━═━═━┐
-│   *Fun COMMANDS* 🔊   │
+│   *Fun COMMANDS* 😜   │
 └─━═━═━═━◈═◈═◈═━═━═━═━┘
 ${menu.fun}
 ┌─━═━═━═━◈═◈═◈═━═━═━═━┐
-│   *OTHER COMMANDS* 🔊   │
+│   *Edit COMMANDS* ㊗️   │
+└─━═━═━═━◈═◈═◈═━═━═━═━┘
+${menu.edit}
+┌─━═━═━═━◈═◈═◈═━═━═━═━┐
+│   *OTHER COMMANDS* 📳   │
 └─━═━═━═━◈═◈═◈═━═━═━═━┘
 ${menu.other}
 
