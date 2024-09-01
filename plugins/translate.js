@@ -5,7 +5,7 @@ cmd({
     pattern: "translate",
     desc: "🌍 Translate text between languages",
     react: "🌐",
-    category: "other",
+    category: "convert",
     filename: __filename
 },
 async (conn, mek, m, { from, q, reply }) => {
