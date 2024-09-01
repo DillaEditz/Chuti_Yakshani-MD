@@ -20,7 +20,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const response = await axios.get(apiUrl);
         const data = response.data;
 
-        let userInfo = `👹️ *_Chuti_Yakshani-Md Git User Info* 👹️ 
+        let userInfo = `👹️ *_Chuti_Yakshani-Md Git User Info_* 👹️ 
         
 👤 *Username*: ${data.name || data.login}
 
