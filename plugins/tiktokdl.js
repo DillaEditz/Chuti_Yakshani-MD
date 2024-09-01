@@ -40,7 +40,7 @@ try{
 
   await m.react('✅');
   let video = data.url;
-  let dev = ' Tiktok Download.'
+  let dev = '♻️ *~Powered by Chuti_Yakshani-MD~* ♻️'
   
   try {
     await conn.sendMessage(m.chat, { video: { url: video }, caption: dev, fileName: 'tt.mp4', mimetype: 'video/mp4' }, { quoted: m });
