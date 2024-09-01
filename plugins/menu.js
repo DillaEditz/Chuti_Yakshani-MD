@@ -38,13 +38,13 @@ cmd({
         let madeMenu = `┌──────────────────────┐
 │  👹 *Chuti_Yakshani-MD* 👹️ │
 └──────────────────────┘
-      *Hello* ${pushname} 👋
 
+      *Hello* ${pushname} 👋
+      
 ┌─━═━═━═━◈═◈═◈═━═━═━═━┐
 │       *MAIN COMMANDS* 🛠️       │
 └─━═━═━═━◈═◈═◈═━═━═━═━┘
 ${menu.main}
-
 ┌─━═━═━═━◈═◈═◈═━═━═━═━┐
 │     *OWNER COMMANDS* 🧑‍💻    │
 └─━═━═━═━◈═◈═◈═━═━═━═━┘
