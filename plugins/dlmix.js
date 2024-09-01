@@ -15,7 +15,7 @@ let baseUrl;
 
 const yourName = "♻️ *~Powered by Chuti_Yakshani-MD~* ♻️";
 
-cmd({ pattern: "fbdl", 
+cmd({ pattern: "fb", 
      alias: ["facebook"], 
      desc: "Download FB videos", 
      category: "download", 
