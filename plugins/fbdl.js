@@ -1,4 +1,4 @@
-/* const { cmd, commands } = require('../command');
+const { cmd, commands } = require('../command');
 const { igdl } = require('ruhend-scraper');
 
 cmd({
@@ -52,4 +52,4 @@ try{
 console.log(e)
   reply(`${e}`)
 }
-}); */
+});
