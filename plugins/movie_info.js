@@ -56,7 +56,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 🗳️ *IMDB Votes:* ${data.imdbVotes}
 
-♻️ *~Powered by Chuti_Yakshani-MD~* ♻️`;
+`;
 
         // Define the image URL
         const imageUrl = data.Poster && data.Poster !== 'N/A' ? data.Poster : config.ALIVE_IMG;
