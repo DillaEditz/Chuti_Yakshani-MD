@@ -22,7 +22,7 @@
                                  const example = definitionData.meanings[0].definitions[0].example || 'No example available';
                                  const synonyms = definitionData.meanings[0].definitions[0].synonyms.join(', ') || 'No synonyms available';
 
-const wordInfo = `👹️ *_Chuti_Yakshani-Md Search * 👹️
+const wordInfo = `👹️ *_Chuti_Yakshani-Md Search_* 👹️
 
 📚 *Word*: ${definitionData.word}
 
