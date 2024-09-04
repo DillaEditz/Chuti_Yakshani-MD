@@ -10,12 +10,10 @@ cmd({
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
         const steps = [
-            '👹️ *_Chuti_Yakshani-Md_* 👹️',
-            '',
+            '👹️ *_Chuti_Yakshani-Md Hacking CMD_* 👹️',
             '💻 *HACK STARTING...* 💻',
             '*Initializing hacking tools...* 🛠️',
             '*Connecting to remote servers...* 🌐',
-            '',
             '```[██████████] 10%``` ⏳'                                            ,
             '```[███████████████████] 20%``` ⏳'                                   ,
             '```[███████████████████████] 30%``` ⏳'                               ,
@@ -26,7 +24,6 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             '```[██████████████████████████████████████████████] 80%``` ⏳'        ,
             '```[██████████████████████████████████████████████████] 90%``` ⏳'    ,
             '```[████████████████████████████████████████████████████] 100%``` ✅',
-            '',
             '🔒 *System Breach: Successful!* 🔓',
             '🚀 *Command Execution: Complete!* 🎯',
             '*📡 Transmitting data...* 📤',
@@ -34,9 +31,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             '*🔧 Finalizing operations...* 🏁',
             '⚠️ *Note:* All actions are for demonstration purposes only.',
             '⚠️ *Reminder:* Ethical hacking is the only way to ensure security.',
-            '',
             '> *HES DEAD💀 ☣',
-            '♻️ *~Powered by Chuti_Yakshani-MD~* ♻️'.
+            '♻️ *~Powered by Chuti_Yakshani-MD~* ♻️'
         ];
 
         for (const line of steps) {
