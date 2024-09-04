@@ -42,7 +42,7 @@ cmd({
                 'params': {
                     'country': 'us',
                     'category': 'technology',
-                    'apiKey': '0f2c43ab11324578a7b1709651736382'
+                    'apiKey': '90da227bbcf044439798ff32ae8b6fc6'
                 }
             });
 
