@@ -13,7 +13,7 @@ function convertToBool(text, fault = 'true') {
 // Export the SESSION_ID environment variable
 module.exports = {
     SESSION_ID: process.env.SESSION_ID || 'h2dVVDYC#jV0GslCapPQIzugD0VQ_OJNJWmo0ni3znhQFt2pBFLk',
-    MONGODB: process.env.MONGODB || "mongodb://mongo:zIxtHUuJPKuaoelBowgvpGIGlXupPJiP@autorack.proxy.rlwy.net:14561",
+    MONGODB: process.env.MONGODB || "mongodb://mongo:hjCWMnNZrMugsEKIMSRpZThiCeXuKujO@junction.proxy.rlwy.net:53735",
     OMDB_API_KEY: process.env.OMDB_API_KEY || "cc1a20a7",
     READ_CMD: process.env.READ_CMD || "true",
 };
