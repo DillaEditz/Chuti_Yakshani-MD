@@ -50,22 +50,16 @@ async (conn, mek, m, { from, q, reply }) => {
             message += `👁️‍🗨️ *𝗩𝗶𝗲𝘄𝘀*: _${formatViews(data.views)}_\n`;
             message += `🔗 *𝗟𝗶𝗻𝗸*: ${data.url}\n\n`;
         });
-
+        message += `👹️ *_Chuti_Yakshani-Md Yt Search_* 👹️\n`;
         message += `*𝗛𝗼𝘄 𝗧𝗼 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗩𝗶𝗱𝗲𝗼 𝗢𝗿 𝗔𝘂𝗱𝗶𝗼 ✅*\n\n`;
         message += `Example -  .video (enter video title)\n`;
         message += `Example - .song (enter video title)\n\n`;
-        message += "dilalk.vercel.app\nᵐᵃᵈᵆ ʙʏ ᴍʳᴅɪʟᴀ ᵒᶠᶜ";
+        message += "♻️ *~Powered by Chuti_Yakshani-MD~* ♻️;
 
         // Send the video details with the image
         await conn.sendMessage(from, { image: { url: thumbnailUrl }, caption: message }, { quoted: mek });
 
-        // Send the voice note after sending the message
-
-await conn.sendPresenceUpdate('recording', from);
-await conn.sendMessage(from, { audio: { url: 'https://github.com/themiyadilann/DilaMD-Media/raw/main/voice/song.mp3' }, mimetype: 'audio/mpeg', ptt: true }, { quoted: mek });
-await conn.sendMessage(from, { audio: { url: 'https://github.com/themiyadilann/DilaMD-Media/raw/main/voice/video.mp3' }, mimetype: 'audio/mpeg', ptt: true }, { quoted: mek });
-
-        
+    
     } catch (e) {
         console.log(e);
         reply(`Error: ${e.message}`);
