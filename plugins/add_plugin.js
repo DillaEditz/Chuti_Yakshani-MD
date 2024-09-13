@@ -4,7 +4,7 @@ const { eypz, commands } = require('../command')
 
 eypz({
     pattern: "addplugin",
-    desc: "New Plugin Add To Octa Bot",
+    desc: "New Plugin Add To bot Bot",
     category: "owner",
     filename: __filename
 },
@@ -20,7 +20,7 @@ async(conn, mek, m, { reply, quoted, args }) => {
         const filePath = path.join(__dirname, '../plugins', `${AmeenXnt}.js`)
 
  
-        if (!quoted) return reply('_Replay To A Js Code For Octa Bot Plugin🙄._')
+        if (!quoted) return reply('_Replay To A Js Code For Bot Plugin🙄._')
 
 
         fs.writeFileSync(filePath, quoted.text, 'utf8')
