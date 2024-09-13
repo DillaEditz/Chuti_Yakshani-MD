@@ -1,59 +1,57 @@
-const { downloadContentFromMessage } = require('@whiskeysockets/baileys');
-const { Sticker } = require('wa-sticker-formatter');
+const { fetchJson } = require('../lib/functions');
 const config = require('../config');
 const { cmd } = require('../command');
+const {Sticker, createSticker, StickerTypes} = require("wa-sticker-formatter");
+const {getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
 
-// Command handler
+
 cmd({
     pattern: "sticker",
-    alias: ["s", "stick"],
-    desc: "Create stickers from image or video",
-    category: "converter",
-    react: "✂️",
+    react: "🔮",
+    alias: ["s","stic"],
+    
+    category: "convert",
+    use: '.sticker <Reply to image>',
     filename: __filename
 },
-async (conn, mek, m) => {
-    try {
-        const { from, quoted } = m;
-        const getQuotedObj = quoted ? quoted : m;
-        const mimetype = getQuotedObj.mimetype || '';
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+    const isQuotedViewOnce = m.quoted ? (m.quoted.type === 'viewOnceMessage') : false
+    const isQuotedImage = m.quoted ? ((m.quoted.type === 'imageMessage') || (isQuotedViewOnce ? (m.quoted.msg.type === 'imageMessage') : false)) : false
+    const isQuotedVideo = m.quoted ? ((m.quoted.type === 'videoMessage') || (isQuotedViewOnce ? (m.quoted.msg.type === 'videoMessage') : false)) : false
+    const isQuotedSticker = m.quoted ? (m.quoted.type === 'stickerMessage') : false
+     if ((m.type === 'imageMessage') || isQuotedImage) {
+      var nameJpg = getRandom('')
+      isQuotedImage ? await m.quoted.download(nameJpg) : await m.download(nameJpg)
+    let sticker = new Sticker(nameJpg + '.jpg', {
+    pack: 'Chuti Yakshani Md', // The pack name
+    author: 'Mr Dilla', // The author name
+      type: q.includes("--crop" || '-c') ? StickerTypes.CROPPED : StickerTypes.FULL,
+      categories: ["🤩", "🎉"], // The sticker category
+      id: "12345", // The sticker id
+      quality: 75, // The quality of the output file
+      background: "transparent", // The sticker background color (only for full stickers)
+  });
+  const buffer = await sticker.toBuffer();
+  return conn.sendMessage(from, {sticker: buffer}, {quoted: mek })
+}  else if ( isQuotedSticker ) { 
 
-        if (!mimetype.startsWith('image') && !mimetype.startsWith('video')) {
-            return conn.sendMessage(from, {
-                text: "Please reply to an image or video with the .sticker command to create a sticker."
-            }, { quoted: mek });
-        }
-
-        conn.sendMessage(from, { react: { text: "🔄", key: mek.key }});
-
-        // Download the media content directly from the message
-        const stream = await downloadContentFromMessage(getQuotedObj, mimetype.split('/')[0]);
-        let mediaBuffer = Buffer.from([]);
-        for await (const chunk of stream) {
-            mediaBuffer = Buffer.concat([mediaBuffer, chunk]);
-        }
-
-        // Create sticker
-        const sticker = new Sticker(mediaBuffer, {
-            pack: config.packname || "Chuti Yakshani Md",
-            author: config.author || "Mr Dilla",
-            type: 'full',
-            categories: ['🤩', '🎉'],
-            id: '12345',
-            quality: 70,
-            background: 'transparent'
-        });
-
-        // Send the sticker
-        const stickerBuffer = await sticker.toBuffer();
-        await conn.sendMessage(from, { sticker: stickerBuffer }, { quoted: mek });
-
-        conn.sendMessage(from, { react: { text: "✅", key: mek.key }});
-    } catch (error) {
-        console.error('Error creating sticker:', error);
-        conn.sendMessage(from, {
-            text: "An error occurred while creating the sticker. Please try again."
-        }, { quoted: mek });
-        conn.sendMessage(from, { react: { text: "❌", key: mek.key }});
-    }
+    var nameWebp = getRandom('')
+    await m.quoted.download(nameWebp)
+  let sticker = new Sticker(nameWebp + '.webp', {
+    pack: 'Chuti Yakshani Md', // The pack name
+    author: 'Mr Dilla', // The author name
+    type: q.includes("--crop" || '-c') ? StickerTypes.CROPPED : StickerTypes.FULL,
+    categories: ["🤩", "🎉"], // The sticker category
+    id: "12345", // The sticker id
+    quality: 75, // The quality of the output file
+    background: "transparent", // The sticker background color (only for full stickers)
 });
+const buffer = await sticker.toBuffer();
+return conn.sendMessage(from, {sticker: buffer}, {quoted: mek })
+}else return await  reply(imgmsg)
+} catch (e) {
+    reply('Error !!')
+    console.log(e)
+}
+})
