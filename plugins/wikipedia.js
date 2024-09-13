@@ -20,7 +20,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const summary = await wiki.summary(q);
         
         // Format the reply
-        let replyText = `
+        let replyText = `👹️ *_Chuti_Yakshani-Md Wiki_* 👹️
 *📚 Wikipedia Summary 📚*
 
 🔍 *Query*: _${q}_
