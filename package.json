@@ -27,6 +27,7 @@
     "yt-search": "2.12.1",
     "api-dylux": "1.8.5",
     "mongoose": "8.5.4",
-    "ruhend-scraper": "7.0.6"
+    "ruhend-scraper": "7.0.6",
+    "wikipedia": "2.1.2"
   }
 }
