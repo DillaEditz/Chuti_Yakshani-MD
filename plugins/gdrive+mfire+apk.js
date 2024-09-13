@@ -1,3 +1,20 @@
+const { fetchJson } = require('../lib/functions');
+const config = require('../config');
+const { cmd, commands } = require('../command');
+
+let baseUrl;
+
+(async () => {
+  try {
+    let baseUrlGet = await fetchJson('https://raw.githubusercontent.com/prabathLK/PUBLIC-URL-HOST-DB/main/public/url.json');
+    baseUrl = baseUrlGet.api;
+  } catch (error) {
+    console.error('Failed to fetch base URL:', error);
+  }
+})();
+
+const yourName = "♻️ *~Powered by Chuti_Yakshani-MD~* ♻️";
+
 cmd({ 
   pattern: "gdrive", 
   alias: ["googledrive"], 
