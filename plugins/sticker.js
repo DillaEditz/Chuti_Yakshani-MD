@@ -1,9 +1,7 @@
-const { fetchJson } = require('../lib/functions');
 const config = require('../config');
 const { cmd } = require('../command');
 const {Sticker, createSticker, StickerTypes} = require("wa-sticker-formatter");
-const {getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
-
+const {getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions');
 
 cmd({
     pattern: "sticker",
