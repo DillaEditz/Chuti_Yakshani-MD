@@ -26,7 +26,6 @@ cmd({
             convert: '',
             search: '',
             fun: '',
-            edit: '',
             other: ''
         };
 
@@ -70,10 +69,6 @@ ${menu.search}
 │   *Fun COMMANDS* 😜   │
 └─━═━═━═━◈═◈═◈═━═━═━═━┘
 ${menu.fun}
-┌─━═━═━═━◈═◈═◈═━═━═━═━┐
-│   *Edit COMMANDS* ㊗️   │
-└─━═━═━═━◈═◈═◈═━═━═━═━┘
-${menu.edit}
 ┌─━═━═━═━◈═◈═◈═━═━═━═━┐
 │   *OTHER COMMANDS* 📳   │
 └─━═━═━═━◈═◈═◈═━═━═━═━┘
