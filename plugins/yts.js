@@ -34,7 +34,7 @@ async (conn, mek, m, { from, q, reply }) => {
         if (!q) return reply("Please type a Name or Url... 🤖");
 
         const search = await yts(q);
-        const videos = search.videos.slice(0, 100); // Get only the first 100 videos
+        const videos = search.videos.slice(0, 5); // Get only the first 100 videos
 
         if (videos.length === 0) return reply("No videos found for your query.");
 
