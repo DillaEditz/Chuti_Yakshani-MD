@@ -16,7 +16,7 @@ const formatViews = (views) => {
 };
 
 // URL for the thumbnail image
-const thumbnailUrl = 'https://telegra.ph/file/bdc5a5b7af8bea3139d42.jpg';
+const thumbnailUrl = 'https://telegra.ph/file/3653d1cd025076c0559d5.jpg';
 
 
 
@@ -38,7 +38,7 @@ async (conn, mek, m, { from, q, reply }) => {
 
         if (videos.length === 0) return reply("No videos found for your query.");
 
-        let message = `*𝗗𝗶𝗹𝗮𝗠𝗗 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗦𝗲𝗮𝗿𝗰𝗵 𝗥𝗲𝘀𝘂𝗹𝘁 🎥*\n\n`;
+        let message = `👹️ *_Chuti_Yakshani-Md_* 👹️ *𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗦𝗲𝗮𝗿𝗰𝗵 𝗥𝗲𝘀𝘂𝗹𝘁 🎥*\n\n`;
 
         videos.forEach((data, index) => {
             message += `*No - ${index + 1} ⤵*\n`;
@@ -54,7 +54,7 @@ async (conn, mek, m, { from, q, reply }) => {
         message += `*𝗛𝗼𝘄 𝗧𝗼 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗩𝗶𝗱𝗲𝗼 𝗢𝗿 𝗔𝘂𝗱𝗶𝗼 ✅*\n\n`;
         message += `Example -  .video (enter video title)\n`;
         message += `Example - .song (enter video title)\n\n`;
-        message += "♻️ *~Powered by Chuti_Yakshani-MD~* ♻️;
+        message += `♻️ *~Powered by Chuti_Yakshani-MD~* ♻️`;
 
         // Send the video details with the image
         await conn.sendMessage(from, { image: { url: thumbnailUrl }, caption: message }, { quoted: mek });
