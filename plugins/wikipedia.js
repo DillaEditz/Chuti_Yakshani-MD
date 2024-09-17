@@ -6,7 +6,7 @@ const wiki = require('wikipedia');
 cmd({
     pattern: "wiki",
     desc: "Search Wikipedia for information",
-    category: "main",
+    category: "search",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
