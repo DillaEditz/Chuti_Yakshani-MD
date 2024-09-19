@@ -4,9 +4,9 @@
   "description": "Chuti_Yakshani-MD is a Multi Device Whatsapp Bot Created By Dilla Editz.",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 link xh5z2thzqtmpovy i58up2rx742yduq && pm2 start index.js --deep-monitoring --attach --name bot",
-    "stop": "pm2 stop bot",
-    "restart": "pm2 restart bot"
+    "start": "pm2 link xh5z2thzqtmpovy i58up2rx742yduq && pm2 start index.js --deep-monitoring --attach --name Chuti_Yakshani-MD",
+    "stop": "pm2 stop Chuti_Yakshani-MD",
+    "restart": "pm2 restart Chuti_Yakshani-MD"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "6.6.0",
