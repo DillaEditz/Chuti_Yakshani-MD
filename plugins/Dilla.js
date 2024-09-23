@@ -15,7 +15,7 @@ cmd(
   ) => {
     try {
       const status = `👹️ *_Chuti_Yakshani-Md_* 👹️\n\n*Name*:- Mr Dilla\n*Age*:- 19\n*From*:- Nittambuwa, Sri Lanka\n*Number*:- 94764570094\n*Web*:- https://mr-dilla.netlify.app/\n*Github*:- https://github.com/mrdilla\n\n♻️ *~Powered by Chuti_Yakshani-MD~* ♻️`;
-      const imageUrl = 'https://i.imgur.com/79kEM0X.jpeg';
+      const imageUrl = 'https://i.imgur.com/JzEDdTj.jpeg';
       const audioUrl = 'https://drive.usercontent.google.com/u/0/uc?id=17X8I3nyXoRjQjfiJVI0YJcJ3e_oLEPTs&export=download';
       const quotedMessage = mek ? mek : null;
       
