@@ -44,8 +44,8 @@ cmd({
 
 //============without watermark==================
 cmd({ 
-     pattern: "tiktok", 
-     alias: ["tt"], 
+     pattern: "tt", 
+     alias: ["tiktok"], 
      desc: "Download TikTok videos", 
      category: "download", 
      filename: __filename }, 
@@ -69,8 +69,8 @@ cmd({
 });
     //============tik song==================
 cmd({ 
-     pattern: "tiktokm", 
-     alias: ["ttm"], 
+     pattern: "ttm", 
+     alias: ["tiktokm"], 
      desc: "Download TikTok music", 
      category: "download", 
      filename: __filename }, 
