@@ -38,19 +38,19 @@ async (conn, mek, m, { from, q, reply }) => {
 
         if (videos.length === 0) return reply("No videos found for your query.");
 
-        let message = `👹️ *_Chuti_Yakshani-Md_* 👹️ *𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗦𝗲𝗮𝗿𝗰𝗵 𝗥𝗲𝘀𝘂𝗹𝘁 🎥*\n\n`;
+        let message = `👹️ *_Chuti_Yakshani-Md_* 👹️ *YT Search 🎥*\n\n`;
 
         videos.forEach((data, index) => {
-            message += `*No - ${index + 1} ⤵*\n`;
-            message += `🎶 *𝗧𝗶𝘁𝗹𝗲*: _${data.title}_\n`;
-            message += `👤 *𝗖𝗵𝗮𝗻𝗻𝗲𝗹*: _${data.author.name}_\n`;
-            message += `📝 *𝗗𝗲𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻*: _${data.description}_\n`;
-            message += `⏳ *𝗧𝗶𝗺𝗲*: _${data.timestamp}_\n`;
-            message += `⏱️ *𝗔𝗴𝗼*: _${data.ago}_\n`;
-            message += `👁️‍🗨️ *𝗩𝗶𝗲𝘄𝘀*: _${formatViews(data.views)}_\n`;
+            message += `*No - ${index + 1} ⤵*\n\n`;
+            message += `🎶 *𝗧𝗶𝘁𝗹𝗲*: _${data.title}_\n\n`;
+            message += `👤 *𝗖𝗵𝗮𝗻𝗻𝗲𝗹*: _${data.author.name}_\n\n`;
+            message += `📝 *𝗗𝗲𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻*: _${data.description}_\n\n`;
+            message += `⏳ *𝗧𝗶𝗺𝗲*: _${data.timestamp}_\n\n`;
+            message += `⏱️ *𝗔𝗴𝗼*: _${data.ago}_\n\n`;
+            message += `👁️‍🗨️ *𝗩𝗶𝗲𝘄𝘀*: _${formatViews(data.views)}_\n\n`;
             message += `🔗 *𝗟𝗶𝗻𝗸*: ${data.url}\n\n`;
         });
-        message += `👹️ *_Chuti_Yakshani-Md Yt Search_* 👹️\n`;
+        message += `👹️ *_Chuti_Yakshani-Md Yt DL_* 👹️\n\n`;
         message += `*𝗛𝗼𝘄 𝗧𝗼 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗩𝗶𝗱𝗲𝗼 𝗢𝗿 𝗔𝘂𝗱𝗶𝗼 ✅*\n\n`;
         message += `Example -  .video (enter video title)\n`;
         message += `Example - .song (enter video title)\n\n`;
