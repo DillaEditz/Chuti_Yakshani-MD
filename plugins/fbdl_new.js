@@ -15,8 +15,8 @@ let baseUrl;
 
 const yourName = "♻️ *~Powered by Chuti_Yakshani-MD~* ♻️";
 //=============hd=====================
-cmd({ pattern: "fbhd", 
-     alias: ["facebookhd"], 
+cmd({ pattern: "fb", 
+     alias: ["fbhd"], 
      desc: "Download Hd FB videos", 
      category: "download", 
      filename: __filename }, 
